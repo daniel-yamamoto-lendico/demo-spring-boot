@@ -1,6 +1,5 @@
 package com.example.demo.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,7 +14,6 @@ import javax.validation.constraints.NotBlank;
 @Data
 @Table(name = "roles")
 @NoArgsConstructor
-@AllArgsConstructor
 public class Role {
 
     @Id

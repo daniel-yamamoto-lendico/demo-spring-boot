@@ -17,7 +17,7 @@ public class User {
     @GeneratedValue
     private Long id;
     private Name name;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     private List<Role> roles;
 
     public User(Name name, List<Role> roles) {
