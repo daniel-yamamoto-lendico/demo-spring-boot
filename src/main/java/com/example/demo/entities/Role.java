@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 
 @Entity
@@ -20,6 +21,7 @@ public class Role {
     @Id
     @GeneratedValue
     private Long id;
+    @NotBlank
     private String roleName;
 
     public Role(final String roleName) {

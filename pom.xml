@@ -44,12 +44,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.wix</groupId>
-			<artifactId>wix-embedded-mysql</artifactId>
-			<version>4.6.0</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
