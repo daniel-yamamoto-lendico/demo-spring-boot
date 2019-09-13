@@ -18,7 +18,7 @@ public class SQLController {
     @Autowired
     private EntityManager entityManager;
 
-    @PostMapping("run")
+    @PostMapping("/run")
     public ResponseEntity runSql(@RequestBody SQLStatement sqlStatement) {
         Query query = entityManager.createNativeQuery(sqlStatement.getSql());
         return ResponseEntity.ok().body(query.getResultList());
