@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.entities.Role;
 import com.example.demo.entities.User;
 import com.example.demo.repositories.RoleRepository;
 import com.example.demo.repositories.UserRepository;
@@ -25,5 +26,10 @@ public class UserController {
     @PutMapping("/insert")
     public ResponseEntity insertUser(@RequestBody User user) {
         return ResponseEntity.accepted().body(userRepository.save(user));
+    }
+
+    @PostMapping("/findByRole")
+    public ResponseEntity findByRole(@RequestBody Role roleName) {
+        return ResponseEntity.ok().body(userRepository.findByRoles(roleName));
     }
 }
